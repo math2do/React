@@ -1,1 +1,61 @@
 @import "../../index.css";
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  margin: 1rem 0;
+  width: 90vw;
+  max-width: var(--fixed-width);
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--dark-shadow);
+}
+
+.section button {
+  color: var(--clr-white);
+  text-transform: capitalize;
+  width: 100%;
+  outline: none;
+  padding: 0.3rem;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--clr-primary-6);
+  cursor: pointer;
+  display: block;
+  letter-spacing: var(--spacing);
+}
+
+.section button:hover {
+  transition: 0.7s;
+  background-color: var(--clr-primary-4);
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+  height: 2.5rem;
+  padding: 2px;
+}
+
+.person img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--light-shadow);
+}
+
+.desc {
+  margin-left: 0.8rem;
+}
+
+.desc .age {
+  color: var(--clr-grey-5);
+}
