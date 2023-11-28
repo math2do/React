@@ -1,0 +1,109 @@
+@import "../../index.css";
+
+.container {
+  width: 90vw;
+  max-width: 650px;
+  background: var(--clr-white);
+  margin: 5rem auto;
+  box-shadow: var(--light-shadow);
+  border-radius: var(--radius);
+}
+
+.container:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.review {
+  text-align: center;
+  padding: 2rem 3rem;
+}
+
+.image {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+}
+
+.image::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--clr-primary-5);
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+
+.image .quote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+
+.review h1 {
+  margin-top: 1rem;
+}
+
+.review h4 {
+  color: var(--clr-primary-4);
+  text-transform: uppercase;
+}
+
+.review p {
+  font-size: 1.07rem;
+  color: var(--clr-grey-4);
+}
+
+.arrows {
+  font-size: 1.5rem;
+  color: var(--clr-primary-3);
+  margin-top: 1rem;
+}
+
+.arrow_left,
+.arrow_right {
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.arrow_left:hover,
+.arrow_right:hover {
+  transition: var(--transition);
+  color: var(--clr-primary-5);
+}
+
+button {
+  margin-top: 1rem;
+  border-radius: var(--radius);
+  border-color: transparent;
+  padding: 0.25rem 1rem;
+  letter-spacing: var(--spacing);
+  background: var(--clr-primary-6);
+  color: var(--clr-primary-2);
+  cursor: pointer;
+}
+
+button:hover {
+  transition: var(--transition);
+  background: var(--clr-primary-2);
+  color: var(--clr-white);
+}
