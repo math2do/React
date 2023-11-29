@@ -1,9 +1,9 @@
-import Reviews from './projects/reviews/Reviews'
+import Accordion from './projects/accordion/Accordion'
 
 // App is like a main function, just wire any component to load
 function App() {
   return (
-    <Reviews />
+    <Accordion />
   );
 }
 

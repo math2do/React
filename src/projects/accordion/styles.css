@@ -1,0 +1,69 @@
+@import "../../index.css";
+
+.container {
+  width: 90vw;
+  max-width: 450px;
+  margin: 4rem auto;
+  background: var(--clr-white);
+  text-align: center;
+  padding: 0.5rem 1rem 2rem 1rem;
+  box-shadow: var(--light-shadow);
+  border-radius: var(--radius);
+}
+
+.container:hover {
+  transition: var(--transition);
+  box-shadow: var(--dark-shadow);
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.question {
+  border: 1.5px solid var(--clr-grey-9);
+  border-radius: var(--radius);
+  text-align: left;
+  padding: 1rem 1rem;
+  box-shadow: var(--light-shadow);
+}
+
+.question p {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--clr-grey-5);
+}
+
+.question:hover {
+  transition: var(--transition);
+  box-shadow: var(--dark-shadow);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.title h4 {
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+.plus,
+.minus {
+  font-size: 1.3rem;
+  transform: translateY(-3px);
+  cursor: pointer;
+  color: var(--clr-primary-5);
+}
+
+.plus:hover,
+.minus:hover {
+  transition: var(--transition);
+  color: var(--clr-primary-3);
+}
