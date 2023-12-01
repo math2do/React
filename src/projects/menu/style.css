@@ -1,0 +1,112 @@
+@import "../../index.css";
+
+.container {
+  width: 90vw;
+  max-width: 760px;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.container h1 {
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.container h1:before {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 1.2rem);
+  content: "";
+  background: var(--clr-primary-4);
+  width: 4rem;
+  height: 2.5px;
+}
+
+.categories {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0 1rem;
+  align-items: center;
+}
+
+.categories button {
+  text-transform: capitalize;
+  color: var(--clr-white);
+  font-size: 0.5rem;
+  letter-spacing: var(--spacing);
+  padding: 0.2rem 0.4rem;
+  outline: none;
+  border: transparent;
+  background: var(--clr-primary-5);
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: var(--dark-shadow);
+}
+
+.categories button:hover {
+  transition: var(--transition);
+  background: var(--clr-primary-3);
+}
+
+.menus {
+  margin-top: 2rem;
+  text-align: left;
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.menus .food {
+  background: var(--clr-white);
+  width: 240px;
+  border-radius: var(--radius);
+}
+
+.food {
+  overflow: hidden;
+}
+
+.food img {
+  width: 100%;
+  height: 10rem;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  object-fit: cover;
+}
+
+.food img:hover {
+  transform: scale(1.1);
+  transition: var(--transition);
+}
+
+.food .desc {
+  padding: 1rem;
+}
+
+.desc .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h4 {
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+.title p {
+  transform: translateY(-4px);
+  background: var(--clr-primary-5);
+  padding: 0 0.2rem;
+  font-size: 0.7rem;
+  color: var(--clr-white);
+  border-radius: var(--radius);
+}
+
+.description {
+  font-size: 0.6rem;
+  margin-top: 0.4rem;
+  color: var(--clr-grey-4);
+}
