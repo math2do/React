@@ -39,6 +39,7 @@
 
 .question:hover {
   transition: var(--transition);
+  transform: scale(1.03);
   box-shadow: var(--dark-shadow);
 }
 
