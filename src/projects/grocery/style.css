@@ -1,0 +1,117 @@
+@import "../../index.css";
+
+.section-center {
+  width: 90vw;
+  max-width: 300px;
+  margin: 5rem auto 0 auto;
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 1rem 1rem;
+  position: relative;
+}
+
+.section-center:hover {
+  transition: var(--transition);
+  box-shadow: var(--dark-shadow);
+}
+
+.input {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: auto 60px;
+  grid-template-areas: "a b";
+}
+
+.input button {
+  font-size: 0.5rem;
+  outline: none;
+  border: transparent;
+  color: var(--clr-white);
+  background: var(--clr-primary-5);
+  cursor: pointer;
+  letter-spacing: 0.07rem;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  grid-area: b;
+}
+
+.input button:hover {
+  transition: var(--transition);
+  background: var(--clr-primary-4);
+}
+
+input {
+  grid-area: a;
+  outline: transparent;
+  font-size: 0.5rem;
+  background: var(--clr-primary-10);
+  border: 1px solid var(--clr-grey-9);
+  border-bottom-left-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+  padding: 0.2rem 0.5rem;
+}
+
+input:focus {
+  border: 1.25px solid var(--clr-grey-5);
+}
+
+.item_list {
+  padding: 1rem 1.05rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+}
+
+.item p {
+  font-size: 0.6rem;
+  letter-spacing: 0.11rem;
+}
+
+.item .edit {
+  font-size: 0.6rem;
+  color: green;
+  cursor: pointer;
+  margin: 0 0.3rem 0 0;
+}
+
+.item .delete {
+  font-size: 0.6rem;
+  color: red;
+  cursor: pointer;
+  margin: 0 0 0 0.3rem;
+}
+
+.clear {
+  font-size: 0.6rem;
+  text-transform: capitalize;
+  color: red;
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+}
+
+.alert {
+  background: var(--clr-primary-10);
+  font-size: 0.5rem;
+  letter-spacing: var(--spacing);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  top: 2px;
+}
+
+.alert_danger {
+  color: red;
+}
+
+.alert_success {
+  color: green;
+}
