@@ -46,7 +46,7 @@ export default function Tours() {
       <main>
         <div className="title">
           <h1>No Tours Left</h1>
-          <button onClick={() => { fetchTours() }}>refresh</button>
+          <button onClick={() => { fetchTours(); }}>refresh</button>
         </div>
       </main>
     );
