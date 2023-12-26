@@ -36,6 +36,6 @@ const data = [
     ],
     company: "CUKER"
   }
-]
+];
 
 export default data;

@@ -34,6 +34,6 @@ const places = [
     image: "https://www.course-api.com/images/tours/tour-5.jpeg",
     price: "2,595"
   }
-]
+];
 
 export default places;

@@ -1,18 +1,18 @@
+import { faArrowLeft, faArrowRight, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import data from "./data";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import "./style.css";
 
 const Reviews = () => {
   const [index, setIndex] = useState(0);
   const next = () => {
     let nextIndex = index + 1;
-    if (nextIndex == data.length) {
+    if (nextIndex === data.length) {
       nextIndex = 0;
     }
     setIndex(nextIndex);
-  }
+  };
 
   const prev = () => {
     let prevIndex = index - 1;
@@ -20,7 +20,7 @@ const Reviews = () => {
       prevIndex = data.length - 1;
     }
     setIndex(prevIndex);
-  }
+  };
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -29,7 +29,7 @@ const Reviews = () => {
   const surprise = () => {
     const newIndex = getRandomInt(data.length);
     setIndex(newIndex);
-  }
+  };
 
   return (
     <main className="container">
@@ -37,9 +37,9 @@ const Reviews = () => {
         surprise={surprise} prev={prev} next={next} />
     </main>
   );
-}
+};
 
-function Review({ id, name, job, image, text, surprise, prev, next }) {
+function Review({ name, job, image, text, surprise, prev, next }) {
   return (
     <div className="review">
       <div className="image">
@@ -60,7 +60,7 @@ function Review({ id, name, job, image, text, surprise, prev, next }) {
 
       </div>
 
-      <button onClick={() => { surprise() }}>Surprise Me</button>
+      <button onClick={() => { surprise(); }}>Surprise Me</button>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import data from './data';
 import './style.css';
 
 export default function Tours() {
@@ -20,19 +19,19 @@ export default function Tours() {
       setLoading(false);
       console.log(err);
     }
-  }
+  };
 
   useEffect(() => {
     fetchTours();
-  }, [])
+  }, []);
 
   const removeTour = (id) => {
     const newTours = tours.filter((tour) => {
-      return tour.id != id;
-    })
+      return tour.id !== id;
+    });
 
     setTours(newTours);
-  }
+  };
 
   if (loading) {
     return (
@@ -60,7 +59,7 @@ export default function Tours() {
       <div className="tours">
         {
           tours.map((place) => {
-            return <Place key={place.id} {...place} removeTour={removeTour} />
+            return <Place key={place.id} {...place} removeTour={removeTour} />;
           })
         }
       </div>
@@ -78,11 +77,11 @@ function Place({ id, name, info, image, price, removeTour }) {
   const [readMore, setReadMore] = useState(true);
 
   const toggleReadMore = () => {
-    setReadMore(!readMore)
-  }
+    setReadMore(!readMore);
+  };
 
   if (readMore) {
-    info = info.substring(0, 200)
+    info = info.substring(0, 200);
     console.log(info);
   }
   info = info + "...";
@@ -98,15 +97,15 @@ function Place({ id, name, info, image, price, removeTour }) {
         {
           readMore ?
             <span className='more_less'
-              onClick={() => { toggleReadMore() }}>Read More</span>
+              onClick={() => { toggleReadMore(); }}>Read More</span>
 
             : <span className='more_less'
-              onClick={() => { toggleReadMore() }}>Show Less</span>
+              onClick={() => { toggleReadMore(); }}>Show Less</span>
         }
       </p>
 
       <div className='remove'>
-        <button className='remove-btn' onClick={() => { removeTour(id) }}>not interested</button>
+        <button className='remove-btn' onClick={() => { removeTour(id); }}>not interested</button>
       </div>
 
     </div>

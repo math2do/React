@@ -1,8 +1,8 @@
-import "./styles.css"
-import questions from "./data"
-import { useState } from 'react';
+import { faMinusCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import questions from "./data";
+import "./styles.css";
 
 const Accordion = () => {
   return (
@@ -11,15 +11,15 @@ const Accordion = () => {
       <div className="questions">
         {
           questions.map((question) => {
-            return <Question key={question.id} {...question} />
+            return <Question key={question.id} {...question} />;
           })
         }
       </div>
     </div>
   );
-}
+};
 
-function Question({ id, title, info }) {
+function Question({ title, info }) {
 
   const [isExpaned, setIsExpanded] = useState(false);
 

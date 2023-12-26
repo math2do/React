@@ -1,13 +1,13 @@
-import "./style.css"
-import { useState } from "react"
-import data from "./data"
+import { useState } from "react";
+import data from "./data";
+import "./style.css";
 
 const App = () => {
-  const [birthdays, setBirthdays] = useState(data)
+  const [birthdays, setBirthdays] = useState(data);
 
   const clearAll = () => {
-    setBirthdays([])
-  }
+    setBirthdays([]);
+  };
 
   return (
     <main className="container">
@@ -15,15 +15,15 @@ const App = () => {
         <h1>{birthdays.length} Birthdays Today</h1>
         {
           birthdays.map((birthday) => {
-            return <Birthday key={birthday.id} {...birthday} />
+            return <Birthday key={birthday.id} {...birthday} />;
           })
         }
 
-        <button onClick={() => { clearAll() }}>clear all</button>
+        <button onClick={() => { clearAll(); }}>clear all</button>
       </div>
     </main>
   );
-}
+};
 
 function Birthday(props) {
   const { name, age, image } = props;
