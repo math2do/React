@@ -41,10 +41,6 @@ const Grocery = () => {
     setName("");
   };
 
-  const showAlert = (show, type, msg) => {
-    setAlert({ show, type, msg });
-  };
-
   const editItem = (id) => {
     const item = items.find((item) => item.id === id);
 
@@ -59,6 +55,9 @@ const Grocery = () => {
     setItems(newItems);
   };
 
+  const showAlert = (show, type, msg) => {
+    setAlert({ show, type, msg });
+  };
   const removeAlert = () => {
     setAlert({ show: false, type: "", msg: "" });
   };
