@@ -14,6 +14,7 @@
 
 .input h2 {
   font-size: 1rem;
+  transform: translateY(2px);
 } 
 
 .input input {
@@ -53,8 +54,8 @@
   width: 100vw;
   min-height: calc(100vh - 160px);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* grid-template-rows: repeat(auto-fit, minmax(50px, 1fr)); */
 }
 
 .color {

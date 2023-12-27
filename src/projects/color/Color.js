@@ -3,7 +3,7 @@ import Values from 'values.js';
 import './style.css';
 
 const Color = () => {
-  const [color, setColor] = useState("#f15025");
+  const [color, setColor] = useState("");
   const [derivedColors, setDerivedColors] = useState(new Values('#f15025').all(10));
   const [alert, setAlert] = useState({});
 
@@ -21,7 +21,6 @@ const Color = () => {
       setDerivedColors(colors);
     } catch (error) {
       showAlert(true, "danger", "invalid color");
-      setDerivedColors([]);
       console.log(error);
     }
   };
