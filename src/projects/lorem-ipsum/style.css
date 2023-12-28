@@ -1,0 +1,65 @@
+@import '../../index.css';
+
+.container {
+  width: 90vw;
+  max-width: 600px;
+  margin: 6rem auto;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.underline {
+  position: relative;
+  display: inline-block;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  bottom: -0.3rem;
+  left: 30%;
+  background: var(--clr-primary-5);
+}
+
+.form {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0 1rem;
+}
+
+.form label {
+  font-size: 1.3rem;
+}
+
+.form input {
+  border: transparent;
+  width: 4rem;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  background: var(--clr-grey-8);
+}
+
+.form button {
+  border: transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 0 0.5rem;
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  background: var(--clr-primary-5);
+}
+
+.paragraph {
+  text-align: left;
+  margin-top: 3rem;
+  color: var(--clr-grey-3);
+  line-height: 2;
+  letter-spacing: 0.02rem;
+}
